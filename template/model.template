@@ -1,0 +1,12 @@
+package $package
+
+/**
+ * @author Joey Yan
+ * @version 1.0
+ * @Description auto
+ */
+public class $class_name {
+
+$property
+$method
+}
