@@ -11,7 +11,7 @@ import org.apache.ibatis.annotations.Param;
 import $model_package.$model_name;
 
 /**
- * @author Joey Yan
+ * @author joey
  * @version 1.0
  * @Description auto
  */

@@ -1,2 +1,2 @@
-python create_java_mapper.py
+python3 create_java_mapper.py
 pause

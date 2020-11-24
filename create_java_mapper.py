@@ -48,7 +48,17 @@ def getAllColumns(cursor, tableName):
 
 # 获取所有表
 def getAllTables(cursor):
-    sql = "show tables like '" + config.tables + "'"
+    sql = "show tables"
+    if len(config.tables) > 0:
+        tables = config.tables.split(",")
+        where = ""
+        columnName = "Tables_in_" + config.db
+        for table in tables:
+            if len(where) == 0:
+                where += " where " + columnName + " like '" + table + "'"
+            else:
+                where += " or " + columnName + " like '" + table + "'"
+        sql += where
     cursor.execute(sql)
     return cursor.fetchall()
 
@@ -134,7 +144,6 @@ if __name__ == '__main__':
     for t in getAllTables(cursor):
         tableName = t[0]
         column = getAllColumns(cursor, tableName)
-        # print(column)
         # 创建model对象
         createJavaFile(config.path + config.model.replace('.', '/'),
                        (upperFirst(underline2hump(tableName)) + '.java'),
