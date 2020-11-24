@@ -10,11 +10,11 @@ pip3 insall pymysql
 ```
 
 # 使用方法
-##下载
+## 下载
 1. Github下载：https://github.com/jyan1011/create_java_mapper/archive/master.zip
 2. 百度网盘下载：
 
-##配置文件
+## 配置文件
 打开项目文件夹内的**config.py**文件进行数据库配置，配置详细如下：
 ```python
 host = '127.0.0.1'  # 数据库地址
@@ -35,7 +35,7 @@ model = 'com.cn.model'
 mapper = 'com.cn.mapper'
 ```
 
-##运行
+## 运行
 1. Mac、Linux系统下直接在工具目录的终端运行
 ```bash
 python3 create_java_mapper.py
@@ -43,6 +43,6 @@ python3 create_java_mapper.py
 2. Windows系统可直接双击目录下的`run.bat`执行
 
 ---
-#问题反馈与打赏
+# 问题反馈与打赏
 1. 如有疑问或发现问题，欢迎在本人小破站留言回复或直接提Issues
 2. 如果您觉得此工具对您有用，欢迎打赏，本人博客地址：[Joeyの技术小栈](https://yanjiayu.cn)
