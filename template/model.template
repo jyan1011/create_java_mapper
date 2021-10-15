@@ -1,0 +1,13 @@
+package $package
+
+/**
+ * @author joey
+ * @version 1.0
+ * @Description auto
+ */
+ $lombok
+public class $class_name {
+
+$property
+$method
+}

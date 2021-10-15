@@ -1,0 +1,23 @@
+# 数据库地址
+host = '127.0.0.1'
+# 数据库端口，默认3306
+port = 3306
+# 数据库用户名
+user = 'dbuser'
+# 数据库密码
+pwd = 'dbpwd'
+# 数据库
+db = 'test'
+# 指定导出的表，支持使用%通配，支持逗号分隔多表
+# tables='tb_%,test_name'
+tables = '%'
+
+# 指定导出目录，不指定默认输出到当前目录
+path = ''
+
+# 指定model文件导出的包，会在指定目录下按照包结构生成文件夹
+model = 'com.cn.model'
+# model文件是否启用lombok @Data注解
+lombok = True
+# 指定mapper文件导出的包，会在指定目录下按照包结构生成文件夹
+mapper = 'com.cn.mapper'

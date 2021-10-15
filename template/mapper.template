@@ -1,0 +1,32 @@
+package $package;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Param;
+import $model_package.$model_name;
+
+/**
+ * @author joey
+ * @version 1.0
+ * @Description auto
+ */
+@Mapper
+public interface $class_name {
+
+    @Results(id = "$hump_name", value = {$column_result})
+    @Select("select * from `$table_name` where id = #{id}")
+    $model_name getById(@Param("id")Long id);
+
+    @Options(useGeneratedKeys = true, keyColumn = "id", keyProperty = "item.id")
+    @Insert("<script>" + $insert_method + "</script>")
+    int saveOne(@Param("item") $model_name $hump_name);
+
+    @Update("<script>" + $update_method + "</script>")
+    int updateOne(@Param("item") $model_name $hump_name);
+
+}
